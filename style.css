@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+header {
+    background-color: #0b1c51;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    display: flex;
+     /*
+      Removes the default padding to the left of the
+      unordered list.
+    */
+    padding-left: 0;
+    list-style: none;
+    align-items: center;
+  }
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    margin: 0 32px 0 0;
+    color: #fff;
+}
+
+header nav ul li:last-child a {
+    /* Removes the margin to the right of the last anchor tag 
+       so that the nav appears centered. */
+    margin-right: 0;
+}
+
+   @media all and (min-width: 600px) {
+    header {
+      /* Changes the default setting from `block` to `flex`. */
+      display: flex;
+      /* Pushes the items (the title and nav) to the far sides of the 
+         browser with space between them. */
+      justify-content: space-between;
+      /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
+         left and right. */
+      padding: 0 30px;
+    }
+  
+    header h1 {
+      /* Sets 14 pixels of margin above and below the `h1` and sets 
+          0 pixels of margin to the left and right. */
+      margin: 14px 0;
+      /* Removes or sets 0 pixels of padding above the `h1`. */
+      padding-top: 0;
+    }
+  
+    header nav {
+      /*
+        Pushes the navigation container down by 8 pixels to make it
+        present a little better visually within the space.
+      */
+      margin-top: 8px;
+    }
+
+    header nav ul li a:hover {
+      color: #bdbdbd;
+    }
+  }
